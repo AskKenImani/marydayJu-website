@@ -49,4 +49,42 @@
   .button:hover {
     background-color: #457b9d;
   }
+
+@media (max-width: 768px) {
+  .loginForm {
+    margin: 3rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .formTitle {
+    font-size: 1.3rem;
+  }
+
+  .input,
+  .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginForm {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .formTitle {
+    font-size: 1.2rem;
+  }
+
+  .input {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
   

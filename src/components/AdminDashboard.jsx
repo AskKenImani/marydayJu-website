@@ -11,8 +11,10 @@ import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 import styles from './AdminDashboard.module.css';
 import { getAuth, signOut } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 function AdminDashboard() {
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [selectedUserId, setSelectedUserId] = useState(null);
   const [selectedUserData, setSelectedUserData] = useState(null);
@@ -115,7 +117,6 @@ function AdminDashboard() {
           lockedGrids[key] = true;
         });
   
-        // Reset user but preserve locked grids
         await updateDoc(userDocRef, {
           selectedPackage: '',
           amountContributed: 0,
@@ -124,7 +125,7 @@ function AdminDashboard() {
           cashedOut: false,
           cashoutSummary: {},
           selectedGrid: selectedUserData.selectedGrid || Array(100).fill(false),
-          lockedGrids: lockedGrids // Prevent editing old paid cells
+          lockedGrids: lockedGrids
         });
   
         setMessage('✅ User reset: grids locked, ready for new payments.');
@@ -262,7 +263,15 @@ function AdminDashboard() {
                   onClick={() => {
                     const confirmed = window.confirm("Are you sure you want to log out?");
                     if (confirmed) {
-                      signOut(getAuth());
+                      const auth = getAuth();
+                      signOut(auth)
+                        .then(() => {
+                          navigate('/contribution');
+                        })
+                        .catch((error) => {
+                          console.error('Logout error:', error);
+                          setMessage('❌ Failed to log out.');
+                        });
                     }
                   }}
                   className={styles.logoutButton}
@@ -270,6 +279,7 @@ function AdminDashboard() {
                 >
                   Logout
                 </button>
+
               </div>
             </>
           ) : (

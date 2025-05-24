@@ -49,8 +49,8 @@ function Home() {
           <h2 className={styles.welcomeText}>About Us</h2>
           <p className={styles.tag}> 
             Marydayju Enterprise is a faith-driven business committed to delivering affordable and reliable administrative support and office-related services to schools, individuals, and organizations. <br /> We specialize in printing and design, typing, online registrations, and operate a contribution/thrift system to help people manage money better and save consistently. 
-            <br /> Born out of a passion for service, Marydayju was established with a vision to bridge the gap between accessibility and quality. We understand how challenging it can be to find essential services, like printing or purchasing basic stationery nearby and affordably. That is why we stepped in, offering both services and merchandise in one trusted space. 
-            <br /> At our core, we believe in honesty, empowerment, and faith. Every service we provide is a reflection of our commitment to helping people get things done faster, smarter, and more conveniently. <br />
+            <br /> Born out of a passion for service, Marydayju was established with a vision to bridge the gap between accessibility and quality.</p> <p className={styles.tag}>We understand how challenging it can be to find essential services, like printing or purchasing basic stationery nearby and affordably. That is why we stepped in, offering both services and merchandise in one trusted space.</p> 
+            <br /> <p className={styles.tag}>At our core, we believe in honesty, empowerment, and faith. Every service we provide is a reflection of our commitment to helping people get things done faster, smarter, and more conveniently. <br />
             Marydayju Enterprise is not just a business; it is a helping hand to your everyday needs.
           </p>
         </section>

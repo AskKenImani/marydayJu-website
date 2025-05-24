@@ -17,7 +17,7 @@ function HeaderHome() {
         </div>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
-          <a href="#home" className={styles.navItem} onClick={() => setMenuOpen(false)}>Home</a>
+          <Link to="/" className={styles.navItem} onClick={() => setMenuOpen(false)}>Home</Link>
           <a href="#about" className={styles.navItem} onClick={() => setMenuOpen(false)}>About</a>
           <a href="#services" className={styles.navItem} onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#tour" className={styles.navItem} onClick={() => setMenuOpen(false)}>Take a Tour</a>

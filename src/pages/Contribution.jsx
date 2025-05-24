@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HeaderContribution from '../components/HeaderContribution';
+import HeaderHome from '../components/HeaderHome';
 import Footer from '../components/Footer';
 import LoginForm from '../components/LoginForm';
 import RegisterForm from '../components/RegisterForm';
@@ -51,7 +51,7 @@ function Contribution() {
 
   return (
     <div>
-      <HeaderContribution
+      <HeaderHome
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         loggedIn={view === 'dashboard'}

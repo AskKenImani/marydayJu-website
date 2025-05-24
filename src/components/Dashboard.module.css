@@ -197,5 +197,94 @@
     cursor: not-allowed;
     color: #666;
   }
-  
+
+@media screen and (max-width: 1024px) {
+  .dashboardContainer {
+    padding: 1.5rem;
+  }
+
+  .welcomeText {
+    font-size: 2.5rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboardButtons {
+    justify-content: center;
+  }
+
+  .dashboardButtons button {
+    width: auto;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dashboardContainer {
+    padding: 1rem;
+  }
+
+  .welcomeText {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .tag {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .gridContainer {
+    overflow-x: scroll;
+  }
+
+  .headerCell,
+  .gridCell,
+  .dayLabel {
+    font-size: 10px;
+    width: 50px;
+    height: 35px;
+  }
+
+  .dashboardButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboardButtons button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .unavailableMessage {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  input[type="number"],
+  select {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .primaryBtn {
+    width: 100%;
+    max-width: 250px;
+    font-size: 0.9rem;
+  }
+}
+
   

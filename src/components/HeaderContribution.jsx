@@ -4,15 +4,14 @@ import styles from './HeaderHome.module.css';
 
 function HeaderContribution({
   loggedIn = false,
-  userRole = null, // 'admin' | 'user' | null
+  userRole = null,
   onLoginClick = () => {},
   onRegisterClick = () => {}
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = () => {
-    // Optional: add Firebase signOut here
-    window.location.reload(); // Temporary full refresh logout
+    window.location.reload();
   };
 
   return (

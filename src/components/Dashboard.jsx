@@ -1,5 +1,3 @@
-// Dashboard.js
-
 import React, { useState, useEffect } from 'react';
 import jsPDF from 'jspdf';
 import styles from './Dashboard.module.css';
@@ -22,7 +20,6 @@ function Dashboard({ onLogout, userName, userId }) {
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
   const weeks = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
 
-  // Fetch user data on load
   useEffect(() => {
     const fetchUserData = async () => {
       try {
@@ -81,7 +78,6 @@ function Dashboard({ onLogout, userName, userId }) {
     const key = `${selectedPackage}-${month}-${label}`;
     if (cashedOut || lockedGrids[key]) return;
 
-    // const key = `${selectedPackage}-${month}-${label}`;
     const updated = { ...checkedDays, [key]: !checkedDays[key] };
     setCheckedDays(updated);
 
@@ -361,7 +357,6 @@ function Dashboard({ onLogout, userName, userId }) {
           </div>
         </div>
       )}
-
       <button onClick={onLogout} >Logout</button>
     </div>
   );
